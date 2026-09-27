@@ -389,7 +389,7 @@ padding: 0.8em;
        }
 
     & .third-child-p{
-        width: 40%;
+        width: 50%;
         text-align: center;
         padding: 0.4em;
         border-radius: 2px;
@@ -462,6 +462,29 @@ footer{
     }
 }
 
+@media (max-width:481px){
+    /* header */
+ .header{
+    .ul{
+        font-size: 0.9rem;
+    }
+ }
+/* hero-section */
+ .hero-section{
+    & .last-div{
+        & p{
+            width: 100%;
+        }
+    }
+ }
+/* know what your business worth */
+.business-worth{
+    .third-child-p{
+        width: 100%;
+    }
+}
+}
+
 @media (min-width:768px) {
 
     /* hero section */
@@ -525,9 +548,5 @@ footer{
      display: flex;
      justify-content: space-between;
      flex-flow: row wrap;
-
-        & .third-child-p{
-            width: 100%;
-        }
     }
     }
