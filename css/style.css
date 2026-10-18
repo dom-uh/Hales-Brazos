@@ -512,6 +512,16 @@ footer{
     }
  }
 
+/* how we  help*/
+ .how-we-help{
+    margin-bottom: 1em;
+
+    & .second-div{
+        border: none;
+    }
+    
+ }
+    
 /* flex */
 .flex{
     display: flex;
