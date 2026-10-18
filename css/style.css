@@ -52,6 +52,7 @@ html{
 
 body{
     font-size: 1rem;
+    background: var(--cream);
 }
 
 header,nav,main,footer{
@@ -190,10 +191,11 @@ margin-bottom: 0.5em;
  font-size: 0.7rem;
   color: var(--white);
   background: hsla(0, 0%, 0%, 0.315);
-  width: 45%;
+  width: fit-content;
   text-align: left;
   margin-top: 2em;
   margin-left: 1.5em;
+  padding: 0.2em;
   border-radius: 2px;
 }
 
@@ -205,66 +207,16 @@ margin-bottom: 0.5em;
      color: var(--black);
     padding-top: 2em;
 
-     a{
-    text-decoration: none;
-    color: var(--white);
-    -webkit-tap-highlight-color: transparent;
-   }
-
-& .div p:nth-child(1){
-    background: var(--gold);
-    color: var(--white);
-    width: 5%;
-    border-radius: 1px;
-    text-align: center;
-}
-
-   & div:nth-child(3){
-       border-radius: 10px;
-    margin: 1em 1.3em;
-    padding: 1em;
-    color: var(--white);
-       background-image: url('/img/01.img.jpg');
-       background-position: center;
-       background-size: cover;
-       background-repeat: no-repeat;
-   }
-
-& div:nth-child(4){
-    border-radius: 10px;
-    margin: 1em 1.3em;
-    padding: 1em;
-     color: var(--white);
-       background-image: url('/img/02.img.jpg');
-       background-position: center;
-       background-size: cover;
-       background-repeat: no-repeat;
-   }
-
-& div:nth-child(5){
-    border-radius: 10px;
-    margin: 1em 1.3em;
-    padding: 1em;
-    color: var(--white);
-       background-image: url('/img/03.img.jpg');
-       background-position: center;
-       background-size: cover;
-       background-repeat: no-repeat;
-   }
-
-  & .second-div{
-    border:1px solid var(--black);
-    border-radius: 10px;
-    margin: 1em 1.3em;
-    padding: o.5em;
-}
-
 & .first-div{
      margin: 1em 1.3em;
      color: var(--gold);
 }
 
  & .second-div{
+    border:1px solid var(--black);
+    border-radius: 10px;
+    margin: 1em 1.3em;
+    padding: 0.5em;
 
    & h2{
      margin-left: 1em;
@@ -275,8 +227,66 @@ margin-bottom: 0.5em;
         padding: 1em;
     }
 }
+}
 
-& h3{
+/* flex */
+.flex{
+    display: flex;
+    flex-flow: row nowrap;
+    place-content: center;
+    margin-top: 3em;
+
+& div{
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+     height: 40vh;
+     width: 100%;
+}
+
+& .div p:nth-child(1){
+    background: var(--gold);
+    color: var(--white);
+    width: 5%;
+    border-radius: 1px;
+    text-align: center;
+}
+
+& div:first-child{  
+    border-radius: 10px;
+    margin: 1em 1.3em;
+    padding: 1em;
+    color: var(--white);
+    background-image: url('/img/01.img.jpg');
+       background-position: center;
+       background-size: cover;
+       background-repeat: no-repeat;
+}
+
+& div:nth-child(2){
+    border-radius: 10px;
+    margin: 1em 1.3em;
+    padding: 1em;
+     color: var(--white);
+       background-image: url('/img/02.img.jpg');
+       background-position: center;
+       background-size: cover;
+       background-repeat: no-repeat;
+   }
+
+& div:nth-child(3){
+    border-radius: 10px;
+    margin: 1em 1.3em;
+    padding: 1em;
+    color: var(--white);
+       background-image: url('/img/03.img.jpg');
+       background-position: center;
+       background-size: cover;
+       background-repeat: no-repeat;
+   }
+
+   & h3{
     margin: 0.5em 0em;
 }
 
@@ -288,8 +298,8 @@ margin-bottom: 0.5em;
         color: var(--gold);
     }
 }
-
 }
+
 /* why us */
 .second-section{
 margin: 2em 1em 1.5em 1em;
@@ -357,6 +367,21 @@ padding: 0.8em;
     background: var(--dark-blue);
     color: var(--white);
 
+   & .first-div{
+    display: flex; 
+    justify-content: space-between;
+   }
+
+ & .div-flex{
+    display: flex;
+    border: 1px solid blue;
+    gap: 5em;
+
+    & div{
+        border: 1px solid red;
+    }
+ }
+
     & .first-child-p,
     .second-child-p,
     .third-child-p,
@@ -371,14 +396,15 @@ padding: 0.8em;
     }
 
     & .second-child-p{
+        border: 1px solid red;
         margin: 0.9em 0em 0.9em;
         font-size: 0.9rem;
         color: var(--white);
         opacity: 0.8;
     }
 
-
       & .third-child-p a{
+        margin-right: 0.5em;
         text-decoration: none;
         color: var(--black);
         -webkit-tap-highlight-color: transparent;
@@ -389,7 +415,8 @@ padding: 0.8em;
        }
 
     & .third-child-p{
-        width: 50%;
+   text-align: center;
+        width: 100%;
         text-align: center;
         padding: 0.4em;
         border-radius: 2px;
@@ -404,7 +431,7 @@ padding: 0.8em;
 
     & .last-child-p{
         display: flex;
-        margin-top: 1em;
+       place-content: center;
         font-size: 0.9rem;
         padding: 0.2em;
         color: var(--white);
@@ -459,30 +486,61 @@ footer{
     & .footer-last-child{
         font-size: 0.7rem;
         text-align: center;
+        padding-bottom: 0.5em;
     }
 }
 
-@media (max-width:481px){
+@media (max-width:575.98px){
     /* header */
  .header{
-    .hd-div p:not(.hd-small){
+   & .hd-div p:not(.hd-small){
     padding-left: 0.2em;
  font-size: 1rem;
 }
+
+ & .ul{
+    display: none;
  }
+ }
+
 /* hero-section */
  .hero-section{
     & .last-div{
         & p{
-            width: 60%;
+         width: fit-content;
         }
     }
  }
+
+/* flex */
+.flex{
+    display: flex;
+    flex-flow: column ;
+     
+    & div{
+        margin-left: 4em;
+        margin-right: 4em;
+        height: 31vh;
+     width: 90%;
+    }
+}
+
 /* know what your business worth */
 .business-worth{
-    .third-child-p{
-        width: 50%;
+
+    & .first-div{
+    display: flex;
+    flex-flow: column;
     }
+    
+
+  & .third-child-p{
+        width: 100%;
+    }
+
+  & .div-flex{
+    gap: 1em;
+  }
 }
 }
 
@@ -494,7 +552,8 @@ footer{
     & .last-div{
 
         & p{
-       width: 25%;
+       width: fit-content;
+       padding: 0.2em;
        text-align: center;
         }
     }
@@ -503,14 +562,16 @@ footer{
 
     /* how we help */
     .how-we-help:not(.second-div){
-     border-radius: 50%;
-     margin: auto;
+    place-content: center;
+     border-radius: 50px;
+     margin-top: 1em;
 
      & .second-div{
         display: flex;
         justify-content: space-between;
         flex-flow: row nowrap;
-        border: none;
+        align-items: center;
+        /* border: ; */
         margin-left: 2em;
         margin-right: 2em;
         padding: 1em;
@@ -546,8 +607,8 @@ footer{
 
     /* know what your business worth */
     .business-worth{
-     display: flex;
+     /* display: flex;
      justify-content: space-between;
-     flex-flow: row wrap;
+     flex-flow: row wrap; */
     }
     }
