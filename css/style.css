@@ -238,11 +238,9 @@ margin-bottom: 0.5em;
     margin-top: 3em;
 
 & div{
-    border: 1px solid blue;
     display: flex;
     flex-direction: column;
     justify-content: center;
-     height: 40vh;
      width: 100%;
 }
 
@@ -506,6 +504,7 @@ footer{
 
 /* hero-section */
  .hero-section{
+
     & .last-div{
         & p{
          width: fit-content;
