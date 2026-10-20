@@ -220,6 +220,7 @@ margin-bottom: 0.5em;
 
    & h2{
      margin-left: 1em;
+     margin-right: 3em;
      padding-top: 0.3em;
     }
 
@@ -515,9 +516,23 @@ footer{
 /* how we  help*/
  .how-we-help{
     margin-bottom: 1em;
-
+    
     & .second-div{
+        place-content: center;
         border: none;
+        padding: none;
+
+        & p{
+            margin-top: 2em;
+            margin-bottom: none;
+        }
+
+         & h2{
+            border: 1px solid black;
+            text-align: center;
+            width: 100%;
+             margin-left: 0em;
+           }
     }
     
  }
