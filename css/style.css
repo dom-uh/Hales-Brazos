@@ -505,7 +505,7 @@ footer{
     }
 }
 
-@media (max-width:575.98px){
+/* @media (max-width:575.98px){
     /* header */
  .header{
    & .hd-div p:not(.hd-small){
@@ -606,9 +606,9 @@ background: purple;
     gap: 1em;
   }
 }
-}
+} */
 
-@media (min-width:768px) {
+@media (max-width:768px) {
 
     /* hero section */
     .hero-section{
