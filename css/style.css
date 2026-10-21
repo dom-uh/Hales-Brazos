@@ -155,7 +155,7 @@ H1{
 .align-p-second-child{
     font-size: 0.9rem;
     color:var(--white);
-    width: 45ch;
+    width: 100%;
 }
 
 .hero-hr{
@@ -583,6 +583,10 @@ background: purple;
    color: var(--white);
    padding: 0.2em;
    border: none;
+
+   & h2{
+    width: 30ch;
+   }
 }
 
 /* know what your business worth */
